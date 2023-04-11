@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "generate": "plop --plopfile scaffolding/generators/index.js"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.6",

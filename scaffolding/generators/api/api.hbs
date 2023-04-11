@@ -1,0 +1,30 @@
+/**
+  *
+  * {{ properCase name }} API
+  *
+  */
+
+import {
+  makeApiCall,
+  APIResponse,
+} from "srx-engine"; // to be implemented and exposed on the engine
+import { MODULE_ID } from "../../constants";
+
+import { EXAMPLE_ENDPOINT } from "../constants";
+
+export default class {{ properCase name }}Api {
+  static async exampleAPICall(accessToken: string): Promise<APIResponse> {
+    return makeApiCall({
+      url: EXAMPLE_ENDPOINT,
+      method: "GET",
+      moduleId: MODULE_ID,
+      headers: {
+        accessToken,
+      },
+    });
+  }
+}
+
+
+
+

@@ -1,0 +1,26 @@
+/**
+  *
+  * {{ properCase name }}
+  *
+  */
+
+import React,{ FC } from 'react';
+import { useTheme } from "styled-components/native";
+
+{{#if wantStyledComp}}
+import { Styled{{ properCase name }} } from './styledComponents';
+{{/if}}
+
+const {{ properCase name }}: FC=()=> {
+  const theme = useTheme();
+
+{{#if wantStyledComp}}
+  return <Styled{{ properCase name }}></Styled{{ properCase name }}>;
+{{else}}
+  return <Styled{{ properCase name }}></Styled{{ properCase name }}>;
+  {{/if}}
+}
+
+{{ properCase name }}.defaultProps = {};
+
+export default {{ properCase name }};
