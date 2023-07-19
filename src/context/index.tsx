@@ -1,5 +1,9 @@
 import { createContext, Dispatch, useContext, useReducer } from 'react';
 
+export enum STATE {
+  USER = "user"
+}
+
 export type User = {
   name: string
 }
@@ -39,12 +43,12 @@ export function useGlobalStateDispatch() {
   return useContext(GlobalStateDispatchContext);
 }
 
-function globalStateReducer(state: any, action: any) {
+function globalStateReducer(state: GlobalState, action: any) {
   switch (action.type) {
-    case 'user': {
+    case STATE.USER: {
       return {
         ...state, 
-        user: action.user
+        user: action.data
       }
     }
 
