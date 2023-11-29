@@ -1,3 +1,4 @@
+import * as React from "react";
 import { createContext, Dispatch, useContext, useReducer } from 'react';
 
 export enum STATE {
@@ -53,7 +54,7 @@ function globalStateReducer(state: GlobalState, action: any) {
     }
 
     default: {
-      throw Error('Unknown action: ' + action.type);
+      return state;
     }
   }
 }
